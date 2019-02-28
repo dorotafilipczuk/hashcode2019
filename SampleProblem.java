@@ -19,26 +19,33 @@ public class SampleProblem {
 		Scanner in = new Scanner(
 				new File(String.format("a_example.txt")));
 		
-		PrintWriter pw = new PrintWriter(new FileWriter(
-				new File(String.format("ouput/%s.out"))));
+		//PrintWriter pw = new PrintWriter(new FileWriter(
+		//		new File(String.format("ouput/%s.out"))));
 		
 		int numberOfPictures = in.nextInt();
 		for (int t = 1; t <= numberOfPictures; t++) {
-			String line = in.nextLine();
-			String[] splitted = line.split(" ");
-			String vh = splitted[0];
-			int numberOfTags = Integer.valueOf(splitted[1]);
-			//ArrayList<String> tags = new 
 			
-			for(int i = 1; i <= numberOfTags; i++) {
+			String vh = in.next();
+			System.out.print(vh);
+			int numberOfTags = Integer.valueOf(in.next());
 				
+			System.out.print(numberOfTags);
+			ArrayList<String> tags = new ArrayList<String>();
+				
+			for(int i = 1; i <= numberOfTags; i++) {
+				tags.add(in.next());
+			}
+				
+			if (vh == "H") {
+				horizontal.add(tags);
+			}
+			else if (vh == "V") {
+				vertical.add(tags);
 			}
 			
-			System.out.println();
-			
 		}
-		pw.flush();
-		pw.close();
+		//pw.flush();
+		//pw.close();
 	}
 	
 }
