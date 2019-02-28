@@ -13,8 +13,8 @@ public class SampleProblem {
 	}
 
 	public static void solve() throws IOException {
-		List<List<String>> vertical;
-		List<List<String>> horizontal;
+		List<ArrayList<String>> vertical = new ArrayList<ArrayList<String>>();
+		List<ArrayList<String>> horizontal = new ArrayList<ArrayList<String>>();
 		
 		Scanner in = new Scanner(
 				new File(String.format("a_example.txt")));
@@ -24,7 +24,17 @@ public class SampleProblem {
 		
 		int numberOfPictures = in.nextInt();
 		for (int t = 1; t <= numberOfPictures; t++) {
-			System.out.println(in.nextLine());
+			String line = in.nextLine();
+			String[] splitted = line.split(" ");
+			String vh = splitted[0];
+			int numberOfTags = Integer.valueOf(splitted[1]);
+			//ArrayList<String> tags = new 
+			
+			for(int i = 1; i <= numberOfTags; i++) {
+				
+			}
+			
+			System.out.println();
 			
 		}
 		pw.flush();
